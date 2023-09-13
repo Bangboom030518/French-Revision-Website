@@ -1,0 +1,461 @@
+//?TITLES
+//welcome title
+.translate-welcome {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      background-image: url("./media/paris.jpg");
+      background-position: bottom;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Hanalei Fill", cursive;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Welcome!";
+      display: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+h1.translate-help {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      background-image: url("./media/paris.jpg");
+      background-position: bottom;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Hanalei Fill", cursive;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Help";
+      display: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+h1.translate-lessons {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      background-image: url("./media/paris.jpg");
+      background-position: bottom;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Hanalei Fill", cursive;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Lessons";
+      display: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+//vocabulary title
+.translate-vocabulary-title {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      background-image: url("./media/paris.jpg");
+      background-position: bottom;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Hanalei Fill", cursive;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Vocabulary";
+      display: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+//?NAV
+//home nav
+.translate-home {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Home";
+      display: inherit;
+    }
+  }
+}
+//study nav
+.translate-study {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Study";
+      display: inherit;
+    }
+  }
+}
+//my account nav
+.translate-account {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "My Account";
+      display: inherit;
+    }
+  }
+}
+//help nav
+p.translate-help {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Help";
+      display: inherit;
+    }
+  }
+}
+//?NAV TOOLTIPS
+//help
+a.translate-help {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      text-decoration: underline;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: "Help";
+      display: block;
+    }
+  }
+}
+//study
+//tooltip lessons
+a.translate-lessons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      text-decoration: underline;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: "Lessons";
+      display: block;
+    }
+  }
+}
+//tooltip vocabulary
+a.translate-vocabulary {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      text-decoration: underline;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: "Vocabulary";
+      display: block;
+    }
+  }
+}
+a.translate-verbs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      text-decoration: underline;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: "Verbs";
+      display: block;
+    }
+  }
+}
+.translate-settings {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      position: absolute;
+      content: "Settings";
+      display: inherit;
+    }
+  }
+}
+.translate-logout {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      position: absolute;
+      content: "Logout";
+      display: inherit;
+    }
+  }
+}
+//tooltip send email
+.translate-send-email {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      text-decoration: underline;
+      visibility: visible;
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: "Send an email";
+      display: block;
+    }
+  }
+}
+//?POPUP TEXT
+//?LOGIN
+//sign in subheading
+h2.translate-sign-in {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "Sign in";
+      display: inherit;
+    }
+  }
+}
+//sign in button
+.translate-sign-in {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "Sign in";
+      display: inherit;
+    }
+  }
+}
+//sign in button
+.translate-delete-account {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "Delete this account";
+      display: inherit;
+    }
+  }
+}
+//save button
+.translate-save {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "Save";
+      display: inherit;
+    }
+  }
+}
+.translate-play {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "Play";
+      display: inherit;
+    }
+  }
+}
+li::after {
+  text-decoration: underline;
+}
+
+//no account subheading/link
+.translate-no-account {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "I don't have an account";
+      display: inherit;
+    }
+  }
+}
+.translate-yes-account {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-decoration: underline;
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      content: "I have an account, sign in";
+      display: inherit;
+    }
+  }
+}
+p.translate-no-account::after {
+  text-decoration: underline;
+}
+//create new account button
+.translate-new-account {
+  position: relative;
+  &:hover {
+    visibility: hidden;
+    &::after {
+      text-align: center;
+      visibility: visible;
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: "Create a new account";
+      display: inherit;
+    }
+  }
+}
+//?MOBILE SUPPORT
+//browser based changes
+@media (pointer: none), (pointer: coarse) {
+}
+//width based changes
+@media screen and (max-width: 815px) {
+  .translate-welcome::after {
+    font-size: 90px;
+  }
+}
+@media screen and (min-width: 815px) {
+  .translate-welcome::after {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .translate-welcome::after {
+    font-size: 50px;
+  }
+}

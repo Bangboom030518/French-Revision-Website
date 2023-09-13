@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/edbfd18497.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Unolingo</title>
+  </head>
+  <div id="popup"></div>
+  <noscript>
+    <div class="noscript">
+    <h2><strong>Error:</strong> no javascript</h2>
+    Sorry, this website does not have access to javascript. Please grant
+    permission to use javascript or check your browser settings as this 
+    website needs javascript to run. You may need to disable your adblocker. 
+    </div>
+  </noscript>
+  <body onload="load()">
+    <header>
+      <nav>
+        <button class="active" onclick="home();"> 
+          <i class="fas fa-home"></i>
+          <p class="translate-home">Accueil</p>
+        </button>
+        <button id="tooltip">
+          <i class="fas fa-graduation-cap"></i>
+          <p class="translate-study">Etudier</p>
+          <span class="tooltiptext">
+            <a class="translate-lessons" href="lessons.html">Cours</a>
+            <a class="translate-vocabulary" href="vocabulary.html">Vocabulaire</a>
+            <a class="translate-verbs" href="verbs.html">Verbes</a>
+          </span>
+        </button>
+        <button id="tooltip">
+          <i class="fas fa-user-circle"></i>
+          <p class="translate-account">Mon Compte</p>
+          <span class="tooltiptext" id="account-tooltip">
+            <li onclick="settings();" class="translate-settings">Réglages</li>
+            <li onclick="logout();" class="translate-logout">Déconnexion</li>
+            <li onclick="login();" class="translate-sign-in">Se connecter</li>
+            <li onclick="signup();" class="translate-new-account">
+              Créer un nouveau compte
+            </li>
+          </span>
+        </button>
+        <button id="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <p class="translate-help">Aide</p>
+          <span class="tooltiptext">
+            <a class="translate-help" href="help.html">Aide</a>
+            <a class="translate-send-email" href="mailto:charlieclift19@wheatleypark.org" target="_blank">Envoyer un e-mail</a>
+          </span>
+        </button>
+      </nav>
+    </header>
+    <div class="video-container">
+      <img src="./media/main background.jpg" id="myVideo"></img>
+    </div>
+    <div class="content">
+      <h1 class="translate-welcome" id="welcome-">Bienvenue!</h1>
+      <div class="btn-scroll">
+        <div class="arrow"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <main>
+      <p>
+        Sorry, I am still working on the content for this page. Visit the
+        <a href="vocabulary.html">vocabulary</a> page instead
+      </p>
+      <h3>My Stats</h3>
+      <h2 id="score2"></h2>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.0.2/firebase-auth.js"></script>
+    <script src="/__/firebase/8.0.2/firebase-database.js"></script>
+    <!-- Initialize Firebase -->
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBwxkDyODBN2Kwi5hvCXz97fTcKewBqoNI",
+        authDomain: "secondary-french-revision.firebaseapp.com",
+        databaseURL:
+          "https://secondary-french-revision-default-rtdb.europe-west1.firebasedatabase.app/",
+        projectId: "secondary-french-revision",
+        storageBucket: "secondary-french-revision.appspot.com",
+        messagingSenderId: "458122652174",
+        appId: "1:458122652174:web:56bcbaff37694b7fc72a5f",
+        measurementId: "G-D2RQ5Q3H23",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="/__/firebase/init.js"></script>
+  </body>
+</html>

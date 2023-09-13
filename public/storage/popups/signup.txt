@@ -1,0 +1,38 @@
+<i class='fas fa-times fa-lg' onclick='javascript:document.getElementById('popup').style.display = 'none'; 
+  javascript:document.getElementById('popup').innerHTML = '';
+  javascript:window.location.href = '#';
+'></i>
+<h2 class='translate-new-account'>Créer un nouveau compte</h2>
+<div class='form'>
+  <input id='name' type='text' name='name' required />
+  <label for='name' class='label-name' id='annoyance'>
+    <span class='content-name'>Nom</span>
+  </label>
+</div>
+<div class='form'>
+  <input id='email' type='text' name='email' required />
+  <label for='email' class='label-name'>
+    <span class='content-name'>E-mail</span>
+  </label>
+</div>
+<div class='form'>
+  <input id='password' type='password' name='password' required />
+  <label for='password' class='label-name'>
+    <span class='content-name'>Mot de passe</span>
+  </label>
+</div>
+<div class='form'>
+  <input id='confirmPassword' type='password' name='password' required />
+  <label for='password' class='label-name' id='annoyance'>
+    <span class='content-name'>Confirmez le mot de passe</span>
+  </label>
+</div>
+<div id='form-break'></div>
+<button id='submit2' class='submit'>
+  <p class='translate-new-account'>Créer un nouveau compte</p>
+  <i style='color: #222222' class='fas fa-plus'></i>
+</button>
+<p class='error' id='error'></p>
+<a onclick='login();'>
+  <p class='translate-yes-account'>J'ai un Compte, se connecter.</p>
+</a>

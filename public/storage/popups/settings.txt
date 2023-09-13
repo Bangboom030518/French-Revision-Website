@@ -1,0 +1,10 @@
+<i class="fas fa-times fa-lg" onclick="javascript:document.getElementById("popup").style.display = "none"; 
+  javascript:document.getElementById("popup").innerHTML = "";
+  javascript:window.location.href = "#";
+"></i>
+<h2 class="translate-settings">Réglages</h2>
+<button id="delete-user" class="submit">
+    <p class="translate-delete-account">Effacer ce compte</p>
+    <i style="color: #222222" class="fas fa-trash-alt"></i>
+</button>
+<p class="error" id="error"></p>

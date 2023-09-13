@@ -1,0 +1,215 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: lightblue;
+  transition: background-color 5000s ease-in-out 0s;
+  font-family: "Covered By Your Grace", cursive;
+}
+.submit {
+  width: calc(80% + 20px);
+  margin: auto;
+  height: 63px;
+  font-size: 14px;
+  border: 3px solid $input-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #222222;
+  transition: all 0.15s cubic-bezier(0.1, 0.4, 0.8, 1.0);
+  &:hover {
+    background-color: $input-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
+  &:focus {
+    background-color: #eba97a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+input:focus {
+  outline: none
+}
+.save {
+  @extend .submit;
+  width: auto;
+  min-width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+#form-break {
+  height: 31.5px;
+}
+/*.form {
+  display: block;
+  font-size: 1.2rem;
+  width: 100%;
+  position: relative;
+  height: 63px;
+  overflow: hidden;
+  background-color: transparent;
+  input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: $input-color;
+    padding-top: 20px;
+    border: none;
+    padding-bottom: 0px;
+    outline: none;
+    position: absolute;
+    background-color: transparent;
+    font-size: 1.2rem;
+  }
+  label {
+    display: inline;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom: 3px solid $input-color;
+      bottom: -1px;
+      left: 0px;
+      transform: translateX(-110%);
+      transition: transform 0.3s cubic-bezier(0.1, 0.4, 0.8, 1.0);
+    }
+  }
+  #annoyance::after {
+    content: "";
+    bottom: -2px;
+  }
+  #pain::after {
+    content: "";
+    bottom: 0px;
+  }
+  #badboi {
+    @extend .label-name;
+    &::after {
+      transition: transform 0.3s cubic-bezier(0.1, 0.4, 0.8, 1.0), margin-bottom 0s linear 0.3s;
+      bottom: -1px;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s cubic-bezier(0.1, 0.4, 0.8, 1.0);
+}
+.form input:focus + .label-name .content-name,
+.form input:-webkit-autofill + .label-name .content-name,
+.form input:-webkit-autofill:hover + .label-name .content-name,
+.form input:-webkit-autofill:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-100%);
+  font-size: 12px;
+  color: $input-color;
+}
+.form input:focus + .label-name::after,
+.form input:-webkit-autofill + .label-name::after,
+.form input:-webkit-autofill:hover + .label-name::after,
+.form input:-webkit-autofill:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translate(0%);
+} 
+.form input:focus + #badboi::after,
+.form input:-webkit-autofill + #badboi::after,
+.form input:-webkit-autofill:hover + #badboi::after,
+.form input:-webkit-autofill:focus + #badboi::after,
+.form input:valid + #badboi::after {
+  margin-bottom: 0px;
+}*/
+.form {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 30px;
+  position: relative;
+  background: #7aeba9;
+  input {
+    width: 90%;
+    margin: 0;
+    height: 20px;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    background: none;
+    text-align: center;
+    &:focus + span {
+      width: 100%;
+      &::before {
+        font-size: 0.75rem;
+        transform: translate(-50%, -300%);
+      }      
+    }
+    &:valid + span {
+      width: 100%;
+      &::before {
+        font-size: 0.75rem;
+        transform: translate(-50%, -300%);
+      }      
+    }
+    &:-webkit-autofill + span {
+      width: 100%;
+      &::before {
+        font-size: 0.75rem;
+        transform: translate(-50%, -300%);
+      }      
+    }     
+  }
+  span {
+    color: #a97aeb;
+    transition: all 0.15s cubic-bezier(0.1, 0.2, 0.8, 1.0);
+    position: absolute;
+    top: calc(100% - 1px);
+    width: 0;
+    margin: 0;
+    border-bottom: 5px solid #eba97a;
+    &::before {
+      content: "Type Here ";
+      font-size: 1rem;
+      transition: all 0.15s cubic-bezier(0.1, 0.2, 0.8, 1.0);
+      left: 50%;
+      text-align: center;
+      width: 200px;
+      transform: translate(-50%, -150%);
+      position: absolute;
+    }    
+  }
+  .email::before {
+    content: "Email";
+  }
+  .password::before {
+    content: "Mot de passe";
+  }
+  .name::before {
+    content: "Nom";
+  }
+  .confirm::before {
+    content: "Confirmer le mot de passe";
+  }
+  .answer::before {
+    content: "Repondre"
+  }
+}

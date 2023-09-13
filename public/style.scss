@@ -1,0 +1,15 @@
+@charset "UTF-8";
+//?VARIABLES
+$text-colour: #f2f2f2;
+$highlight-colour: #ffb294;
+$input-color: #7aeba9;
+//?FONTS
+@import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+//?IMPORTS
+@import "./translation";
+@import "./header";
+@import "./inputs";
+@import "./main";
+@import "./checklist";

@@ -1,0 +1,20 @@
+Hello
+Hi
+What’s your name?
+My name is
+How are you?
+I’m (very) well.
+Not bad, thanks.
+Not well!
+And you?
+Bye
+See you later!
+Do you have brothers and sisters?
+Yes. I have…
+a brother
+a sister
+a half/step brother
+(two) brothers
+(three) half/step sisters
+I don’t have any brother or sister.
+I am an only child.

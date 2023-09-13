@@ -1,0 +1,157 @@
+header {
+  color: $text-colour;
+  font-family: "Nerko One", cursive;
+  position: fixed;
+  z-index: 2;
+  padding: 5px;
+  font-size: 30px;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  animation: hload 1s ease;
+  user-select: none;
+  background-position: bottom;
+  background-size: cover;
+  transition: all 0.3s cubic-bezier(0.1, 0.4, 0.8, 1.0);
+  overflow: visible; 
+  &:hover {
+    box-shadow: 0px 0px 20px #222222;
+  }
+  button {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    display: inline;
+    transition: all 0.3s;
+    border-bottom: solid transparent;
+    font-family: "Nerko One", cursive;
+    &:hover, &:focus {
+      border-bottom: solid rgba($color: $text-colour, $alpha: 1);
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .active {
+    border-bottom: solid rgba($color: $text-colour, $alpha: 1);
+  }
+  nav {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}
+nav button i {
+  width: 50px;
+  height: 50px;
+}
+/*#tooltip {
+  position: relative;
+  display: inline-block;
+  background: none;
+  list-style: none;
+  .tooltiptext {
+    font-size: 20px;
+    visibility: hidden;
+    width: 120px;
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    background: linear-gradient(65deg, #eba97a, #7aeba9, #a97aeb);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    }
+}
+
+.tooltiptext li:hover {
+  text-decoration: underline;
+}
+
+#tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+#tooltip:focus .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltiptext a {
+  color: $text-colour;
+  text-decoration: underline transparent;
+  &:hover {
+    text-decoration: $text-colour underline;
+  }
+}*/
+#tooltip {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+#tooltip .tooltiptext {
+  padding: 10px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  transition: opacity 1s;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  background: linear-gradient(65deg, #eba97a, #7aeba9, #a97aeb);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  opacity: 0;
+
+}
+#tooltip:focus .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+#tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #fefefe transparent;
+}
+.tooltiptext a, .tooltiptext li {
+  color: $text-colour;
+  font-size: 20px;
+  text-decoration: underline transparent;
+  &:hover {
+    text-decoration: $text-colour underline;
+  }
+}

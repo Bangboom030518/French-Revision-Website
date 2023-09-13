@@ -1,0 +1,392 @@
+//?APP STYLES
+body,
+.content,
+html,
+main {
+  min-width: 100%;
+  max-width: 100%;
+  width: inherit;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+}
+.content {
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
+html, body {
+  max-width: 100%;
+  min-height: 100%;
+}
+main {
+  min-width: 100%;
+  max-width: 100%;
+  background-color: none;
+}
+body,
+.content {
+  font-family: "Covered By Your Grace", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background: linear-gradient(65deg, #eba97a, #7aeba9, #a97aeb);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-attachment: fixed;
+  text-shadow: 2px 2px 8px;
+  padding: 5px;
+}
+img {
+  user-select: none;  
+}
+a,
+p,
+h2 {
+  width: 100%;
+  text-align: center;
+  &::after {
+    width: 100%;
+  }
+}
+a {
+  text-decoration: underline;
+  &:hover {
+    cursor: pointer;
+  }
+}
+hr, br {
+  background-color: transparent;
+}
+button {
+  font-family: "Covered By Your Grace", cursive;
+  color: $text-colour;
+  &:focus {
+    outline: none;
+  }
+}
+input {
+  font-family: "Covered By Your Grace", cursive;
+}
+
+* {
+  &::selection {
+    background-color: $highlight-colour;
+    text-shadow: none;
+  }
+}
+.description {
+  font-size: 25px;
+  animation: hload 1s cubic-bezier(0.1, 0.4, 0.8, 1.0);
+  width: 80%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+//popup
+#popup {
+  display: none;
+  position: fixed;
+  overflow: auto;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 3000px;
+  background: linear-gradient(65deg, #eba97a, #7aeba9, #a97aeb);
+  width: 40%;
+  border: 5px solid #eba97a;
+  height: auto;
+  max-height: 70%;
+  padding: 15px;
+  overflow-y: hidden;
+  pointer-events: initial;
+  .fa-times {
+    position: absolute;
+    cursor: pointer;
+  }
+}
+.noscript {
+  @extend #popup;
+  display: block;
+}
+//title
+h1 {
+  text-shadow: none;
+  text-align: center;
+  background-image: url("./media/paris.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Hanalei Fill", cursive;
+  font-size: 120px;
+  margin-bottom: 0;
+  animation: vload 1s cubic-bezier(0.1, 0.4, 0.8, 1.0);
+  &::selection {
+    background-color: transparent;
+  }
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+h3 {
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+}
+code{
+  text-shadow: none;
+  color: crimson;
+  background-color: #efefef;
+}
+.body {
+  width: 75%;
+}
+//?LOADING ANIMATION
+#loader {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  z-index: 1500;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  z-index: 1001;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  border-radius: 50%;
+  animation: spin 2.5s linear infinite;
+  z-index: 1001;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  z-index: 1001;
+}
+//?VIDEO BACKGROUND
+#myVideo {
+  position: absolute;
+  margin: 0;
+  right: 0;
+  top: 0;
+  //bottom: 0;
+  width: inherit;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: auto;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.video-container {
+  position: absolute;
+  margin: 0;
+  right: 0;
+  bottom: 0;
+  width: inherit;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.content {
+  top: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: $text-colour;
+  width: inherit;
+  height: auto;
+  min-height: 100px;
+  min-width: 100%;
+  max-width: 100%;
+  //padding: 20px;
+}
+main {
+  width: inherit;
+  min-width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+  top: 110%;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+//?SCROLL BUTTON
+.btn-scroll {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-bottom: solid $text-colour;
+    border-left: solid $text-colour;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    animation: vload2 1s cubic-bezier(0.1, 0.4, 0.8, 1.0) infinite;
+  }
+  .circle {
+    border: solid $text-colour;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+}
+//?TABLES
+table {
+  width: 100%;
+  border: 2px solid #eba97a;
+}
+
+td, th {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #a97aeb;
+}
+
+tr:nth-child(odd) {
+  background-color: #7aeba9;
+}
+tr:nth-child(1) {
+  background-color: #eba97a;
+}
+caption {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+//?ANIMATIONS
+@keyframes vload {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hload {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes vload2 {
+  0% {
+    opacity: 0;
+    transform: translate(0%, -1500%) rotate(-45deg);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+//?MOBILE SUPPORT
+//browser based changes
+@media (pointer: none), (pointer: coarse) {
+}
+//width based changes
+@media (max-width: 1318px) {
+  main ol {
+    width: 90%;
+    div {
+      width: inherit;
+    }
+  }
+}
+@media (max-width: 815px) {
+  h1 {
+    font-size: 90px;
+  }
+  nav button i {
+    display: inline;
+  }
+  nav button p {
+    display: none;
+  }
+  #popup {
+    width: 60%;
+  }
+}
+@media (min-width: 815px) {
+  h1 {
+    font-size: 120px;
+  }
+  nav button i {
+    display: none;
+  }
+  nav button p {
+    display: inline;
+  }
+
+}
+@media (max-width: 450px) {
+  h1 {
+    font-size: 50px;
+  }
+  #popup {
+    width: 75%;
+  }
+}

@@ -1,0 +1,160 @@
+//?CHECKBOXES
+.checklist {
+  display: block;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%, -50%);
+  list-style: circle;
+  li {
+    // The container
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    list-style: circle;
+    width: inherit;
+    // Hide the browser's default checkbox
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: inherit;
+      top: 0;
+      left: -45%;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+    // Create a custom checkbox
+    .checkmark {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      transition: all 0.3s;
+    }
+    // On mouse-over, add a grey background color
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    // When the checkbox is checked, add a blue background
+    input:checked ~ .checkmark {
+      background-color: #8cff7a;
+    }
+
+    // Create the checkmark/indicator (hidden when not checked)
+    .checkmark::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    // Show the checkmark when checked
+    input:checked ~ .checkmark::after {
+      display: block;
+    }
+
+    // Style the checkmark/indicator
+    .checkmark::after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+//?RADIO BUTTONS
+#game {
+  width: auto;
+  min-width: 90%;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+.radio-list {
+  padding: 10px;
+  max-width: 100%;
+  display: block;
+  transition: background-color 0.3s ease;
+  label {
+    width: inherit;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    label {
+      display: block;
+    }
+  }
+
+  // Hide the browser's default radio button
+  label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  // Create a custom radio button
+  .radiomark {
+    position: absolute;
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  //On mouse-over, add a grey background color
+  label:hover input ~ .radiomark {
+    background-color: #ccc;
+  }
+
+  //When the radio button is checked, add a green background
+  label input:checked ~ .radiomark {
+    background-color: #8cff7a;
+  }
+
+  // Create the indicator (the dot/circle - hidden when not checked)
+  .radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  // Show the indicator (dot/circle) when checked
+  label input:checked ~ .radiomark:after {
+    display: block;
+  }
+
+  // Style the indicator (dot/circle)
+  label .radiomark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+}
+#current-word {
+  font-size: 40px;
+}

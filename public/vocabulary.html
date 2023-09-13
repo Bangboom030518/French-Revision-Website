@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script defer src="app.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/edbfd18497.js" crossorigin="anonymous"></script>
+  <title>Unolingo - Vocabulaire</title>
+</head>
+<div id="popup"></div>
+<noscript>
+  <div class="noscript">
+    <h2><strong>Error:</strong> no javascript</h2>
+    Sorry, this website does not have access to javascript. Please grant
+    permission to use javascript or check your browser settings as this
+    website needs javascript to run. You may need to disable your adblocker.
+  </div>
+</noscript>
+
+<body onload="load(); loadVocab();">
+  <header>
+    <nav>
+      <button onclick="home();">
+        <i class="fas fa-home"></i>
+        <p class="translate-home">Accueil</p>
+      </button>
+      <button id="tooltip" class="active">
+        <i class="fas fa-graduation-cap"></i>
+        <p class="translate-study">Etudier</p>
+        <span class="tooltiptext">
+          <a class="translate-lessons" href="lessons.html">Cours</a>
+          <a class="translate-vocabulary" href="vocabulary.html">Vocabulaire</a>
+          <a class="translate-verbs" href="verbs.html">Verbes</a>
+        </span>
+      </button>
+      <button id="tooltip">
+        <i class="fas fa-user-circle"></i>
+        <p class="translate-account">Mon Compte</p>
+        <span class="tooltiptext" id="account-tooltip">
+        </span>
+      </button>
+      <button id="tooltip">
+        <i class="fas fa-question-circle"></i>
+        <p class="translate-help">Aide</p>
+        <span class="tooltiptext">
+          <a class="translate-help" href="help.html">Aide</a>
+          <a class="translate-send-email" href="mailto:charlieclift19@wheatleypark.org" target="_blank">Envoyer un
+            e-mail</a>
+        </span>
+      </button>
+    </nav>
+  </header>
+  <div class="video-container">
+    <img src="./media/vocabulary background.jpg" id="myVideo"></img>
+  </div>
+  <div class="content">
+    <h1 class="translate-vocabulary-title">Vocabulaire</h1>
+    <div class="btn-scroll">
+      <div class="arrow"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+  <main>
+    <h3>Include:</h3>
+    <ul class="checklist" id="vocab-checklist">
+      <li>
+        Cafe<input id="check-cafe" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Future<input id="check-future" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Greetings<input id="check-greetings" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Future2<input id="check-future2" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Opinions<input id="check-opinions" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Paris<input id="check-paris" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Schools<input id="check-schools" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Siblings<input id="check-siblings" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Sports<input id="check-sports" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Towns<input id="check-towns" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Verbs_Personalities<input id="check-verbs" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+    </ul>
+    <br /><br />
+    <h3>Game:</h3>
+    <ul class="checklist">
+      <li>
+        Written Questions<input id="check-written" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        Multiple Choice Questions<input id="check-multiple" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+    </ul>
+    <br id="form-break">
+    <h2>Answer with:</h2>
+    <ul class="checklist">
+      <li>
+        English<input id="check-french" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+      <li>
+        French<input id="check-english" type="checkbox" checked /><span class="checkmark"></span>
+      </li>
+    </ul>
+    <button id="play-game" class="submit" style="position: relative; width: auto; min-width: 50%;">
+      <p class="translate-play">Jouer</p>
+      <i style="color: #222222" class="fas fa-play"></i>
+    </button>
+    <br><br>
+    <div id="game"></div>
+  </main>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/8.2.1/firebase-app.js"></script>
+  <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+  <script src="/__/firebase/8.0.2/firebase-auth.js"></script>
+  <script src="/__/firebase/8.0.2/firebase-database.js"></script>
+  <!-- Initialize Firebase -->
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBwxkDyODBN2Kwi5hvCXz97fTcKewBqoNI",
+      authDomain: "secondary-french-revision.firebaseapp.com",
+      databaseURL:
+        "https://secondary-french-revision-default-rtdb.europe-west1.firebasedatabase.app/",
+      projectId: "secondary-french-revision",
+      storageBucket: "secondary-french-revision.appspot.com",
+      messagingSenderId: "458122652174",
+      appId: "1:458122652174:web:56bcbaff37694b7fc72a5f",
+      measurementId: "G-D2RQ5Q3H23",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>

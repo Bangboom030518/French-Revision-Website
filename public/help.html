@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    main p,
+    main li {
+        font-size: 1.5rem;
+    }
+
+    main ol {
+        width: 75%;
+    }
+
+    main ol div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 50%;
+        margin: auto;
+    }
+</style>
+
+<head>
+    <script defer src="app.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/edbfd18497.js" crossorigin="anonymous"></script>
+    <title>French Revision Site - Aide</title>
+    <script>
+        function reload() {
+            location.reload(true);
+            alert("Success!");
+        }
+    </script>
+</head>
+<div id="popup"></div>
+<noscript>
+    <div class="noscript">
+    <h2><strong>Error:</strong> no javascript</h2>
+    Sorry, this website does not have access to javascript. Please grant
+    permission to use javascript or check your browser settings as this 
+    website needs javascript to run. You may need to disable your adblocker. 
+    </div>
+  </noscript>
+<body onload="load()">
+    <header>
+        <nav>
+            <button onclick="home();">
+                <i class="fas fa-home"></i>
+                <p class="translate-home">Accueil</p>
+            </button>
+            <button id="tooltip">
+                <i class="fas fa-graduation-cap"></i>
+                <p class="translate-study">Etudier</p>
+                <span class="tooltiptext">
+                    <a class="translate-lessons" href="lessons.html">Cours</a>
+                    <a class="translate-vocabulary" href="vocabulary.html">Vocabulaire</a>
+                    <a class="translate-verbs" href="verbs.html">Verbes</a>
+                </span>
+            </button>
+            <button id="tooltip">
+                <i class="fas fa-user-circle"></i>
+                <p class="translate-account">Mon Compte</p>
+                <span class="tooltiptext" id="account-tooltip"></span>
+            </button>
+            <button id="tooltip" class="active">
+                <i class="fas fa-question-circle"></i>
+                <p class="translate-help">Aide</p>
+                <span class="tooltiptext">
+                    <a class="translate-help" href="help.html">Aide</a>
+                    <a class="translate-send-email" href="mailto:charlieclift19@wheatleypark.org"
+                        target="_blank">Envoyer un e-mail</a>
+                </span>
+            </button>
+        </nav>
+    </header>
+    <div class="video-container">
+        <img src="./media/main background.jpg" id="myVideo"></img>
+    </div>
+    <div class="content">
+        <h1 class="translate-help" id="scroll-to">Aide</h1>
+        <div class="btn-scroll">
+            <div class="arrow"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <main>
+        <h3>Accounts:</h3>
+            <h2>Why create an account?</h2>
+                <p class="body">Your account will be used to save all your progress in the cloud so you can retrieve it on
+                    any device.This account will also be used to display your name on the class leaderboard. When setting up 
+                    your account, you do not need to use an actual email adress as it will be used for authentication only and 
+                    not to contact you. Your name can be whatever you want and it will be the name displayed on the class leaderboard.
+                </p>
+            <h2>Create an account:</h2>
+                <ol>
+                    <div>
+                        <li>Click on the 'mon compte' button at the top of the screen. Then click 'Créer un nouveau compte'.
+                        </li>
+                        <img src="./media/sign up.png" alt="">
+                    </div>
+                    <br>
+                    <div>
+                        <img src="./media/sign up popup.png" alt="" style="width: auto; height: 150px;">
+                        <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+                        <li>
+                            Enter a chosen name into the 'nom' input, enter an email into the 'E-mail' input and enter your
+                            password into the 'mot de passe' input.
+                            You will then need to type your password again into the last field. Click the button to finish.
+                        </li>
+                    </div>
+                </ol>
+            <h2>Sign In</h2>
+            <ol>
+                <div>
+                    <li>Click on the 'mon compte' button at the top of the screen. Then click 'Se connecter'.
+                    </li>
+                    <img src="./media/sign up.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="./media/login popup.png" alt="" style="width: auto; height: 150px;">
+                    <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+                    <li>
+                        Enter your email into the 'E-mail' input and enter your password into the 'mot de passe' input.
+                        Click the button to finish. You should now be logged in and all your progress will be saved to 
+                        your account.
+                    </li>
+                </div>
+            </ol>
+            <h2>Privacy:</h2>
+                <p class="body">
+                    Your account data is not shared with anyone outside of this website. On signing up, it will collect a
+                    nickname, an email address and a password. Your score achieved on the built in games is then stored in
+                    the database and used to create an automatic leaderboard. The leaderboard will display your nickname and 
+                    score, <strong>not your email or password</strong>, which will be visible to anyone using this site. If 
+                    you do not want any of this visible, do not sign in and your score will be kept in a <code>localStorage</code> 
+                    cookie only, without a name. <code>localStorage</code> cookies are not cleared.
+                </p> 
+        <h3>Updates:</h3>
+        <p class="body">This website recieves frequent updates, which
+            bring new features,styling upgrades, bug fixes and performance imporvements.
+            However,in most browsers this website is often stored in cache, meaning it
+            is saved locally to your device to save it having to be completely
+            loaded everytime. This can sometimes mean you don't recieve updates.
+            Press this button to hard reload this website and clear all cache,
+            to make sure you have the latest updates. This will <strong>not</strong>
+            clear any of your data on this website.
+            <br id="form-break"><br id="form-break"><br id="form-break">
+            <button class="submit" onclick="reload()">
+                Reload
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </p>
+        <h3>Need more help?</h3>
+        <button style="width:75%" class="submit" onclick="email()">
+            Email Me
+            <i class="fas fa-envelope"></i>
+        </button>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.0.2/firebase-auth.js"></script>
+    <script src="/__/firebase/8.0.2/firebase-database.js"></script>
+    <!-- Initialize Firebase -->
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBwxkDyODBN2Kwi5hvCXz97fTcKewBqoNI",
+            authDomain: "secondary-french-revision.firebaseapp.com",
+            databaseURL: "https://secondary-french-revision-default-rtdb.europe-west1.firebasedatabase.app/",
+            projectId: "secondary-french-revision",
+            storageBucket: "secondary-french-revision.appspot.com",
+            messagingSenderId: "458122652174",
+            appId: "1:458122652174:web:56bcbaff37694b7fc72a5f",
+            measurementId: "G-D2RQ5Q3H23"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
